@@ -1,4 +1,4 @@
-module github.com/SleeNFire/go-microservice
+module github.com/SleepNFire/go-microservice
 
 go 1.23.2
 

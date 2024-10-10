@@ -3,7 +3,7 @@ package internal
 import (
 	"context"
 	"fmt"
-	"github.com/SleeNFire/go-microservice/internal/gin"
+	"github.com/SleepNFire/go-microservice/internal/gin"
 	"net/http"
 )
 
