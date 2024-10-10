@@ -2,6 +2,12 @@ package gin
 
 import "github.com/gin-gonic/gin"
 
+const (
+	Public    = "Public"
+	Internal  = "Internal"
+	Technical = "Technical"
+)
+
 type ApiGin struct {
 	Engine *gin.Engine
 	Name   string
@@ -15,20 +21,21 @@ type GinService struct {
 }
 
 func newGinService() GinService {
+
 	gs := GinService{
 		Public: ApiGin{
 			Engine: gin.New(),
-			Name:   "Public",
+			Name:   Public,
 			Port:   "8080",
 		},
 		Internal: ApiGin{
 			Engine: gin.New(),
-			Name:   "Internal",
+			Name:   Internal,
 			Port:   "8081",
 		},
 		Technical: ApiGin{
 			Engine: gin.New(),
-			Name:   "Technical",
+			Name:   Technical,
 			Port:   "8082",
 		},
 	}
