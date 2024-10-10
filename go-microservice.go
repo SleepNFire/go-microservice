@@ -1,9 +1,9 @@
-package internal
+package go_microservice
 
 import (
 	"context"
 	"fmt"
-	"github.com/SleepNFire/go-microservice/internal/gin"
+	"github.com/SleepNFire/go-microservice/gin"
 	"net/http"
 )
 

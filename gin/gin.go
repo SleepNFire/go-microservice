@@ -20,7 +20,7 @@ type GinService struct {
 	Technical ApiGin
 }
 
-func newGinService() GinService {
+func NewGinService() GinService {
 
 	gs := GinService{
 		Public: ApiGin{
