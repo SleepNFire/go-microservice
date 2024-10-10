@@ -6,6 +6,10 @@ const (
 	Public    = "Public"
 	Internal  = "Internal"
 	Technical = "Technical"
+
+	Port80 = ":8080"
+	Port81 = ":8081"
+	Port82 = ":8082"
 )
 
 type ApiGin struct {
@@ -20,23 +24,22 @@ type GinService struct {
 	Technical ApiGin
 }
 
-func newGinService() GinService {
-
+func NewGinService() GinService {
 	gs := GinService{
 		Public: ApiGin{
 			Engine: gin.New(),
 			Name:   Public,
-			Port:   "8080",
+			Port:   Port80,
 		},
 		Internal: ApiGin{
 			Engine: gin.New(),
 			Name:   Internal,
-			Port:   "8081",
+			Port:   Port81,
 		},
 		Technical: ApiGin{
 			Engine: gin.New(),
 			Name:   Technical,
-			Port:   "8082",
+			Port:   Port82,
 		},
 	}
 	gs.Public.Engine.Use(gin.Logger())
